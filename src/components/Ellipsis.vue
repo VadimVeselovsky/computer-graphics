@@ -1,7 +1,7 @@
 <template>
   <div>
     <canvas id="ellipsisCanvas" width="500" height="500" style="scaleY(-1); border: 1px solid black"/>
-    <div style="text-align: center">
+    <div style="text-align: center; display: grid; grid-row-gap: 8px">
       <div>
         <label for="params_a">a</label>
         <input type="number" v-model="params.a" id="params_a" />
@@ -19,10 +19,10 @@
         <input type="number" v-model="params.angle" id="params_n" />
       </div>
       <div>
-        <div>Смещение</div>
+        <div style="margin-bottom: 4px;">Смещение</div>
         <label for="params_hx">x</label>
         <input type="number" v-model="params.hx" id="params_hx" />
-        <label for="params_hy">y</label>
+        <label style="margin-left: 8px" for="params_hy">y</label>
         <input type="number" v-model="params.hy" id="params_hy" />
       </div>
     </div>
