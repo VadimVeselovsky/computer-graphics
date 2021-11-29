@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <component :is="component" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Triangle from '@/components/Triangle'
+import Ellipsis from '@/components/Ellipsis'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  computed: {
+    component() {
+      return Ellipsis
+    }
   }
 }
+
 </script>
 
 <style>
